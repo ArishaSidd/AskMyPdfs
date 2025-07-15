@@ -41,7 +41,7 @@ bot_template = '''
 user_template = '''
 <div class="chat-message user">
     <div class="avatar">
-        <img src="https://i.ibb.co/rdZC7LZ/Photo-logo-1.png">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.DSLxUugtf_1PxcHlWsQ7bgAAAA?w=400&h=400&rs=1&pid=ImgDetMain&o=7&rm=3">
     </div>    
     <div class="message">{{MSG}}</div>
 </div>
