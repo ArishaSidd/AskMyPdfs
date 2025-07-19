@@ -5,3 +5,4 @@ langchain
 sentence-transformers
 langchain-community
 faiss-cpu
+ subprocess
