@@ -1,3 +1,24 @@
+import subprocess
+import socket
+
+# Check if Ollama is already running
+def is_ollama_running(host='127.0.0.1', port=11434):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        return sock.connect_ex((host, port)) == 0
+
+# Start Ollama if it's not running
+def start_ollama_if_not_running():
+    if not is_ollama_running():
+        print("Starting Ollama server...")
+        subprocess.Popen(["ollama", "run", "mistral"])  # or use "serve" if you want to only start Ollama
+    else:
+        print("Ollama is already running.")
+
+start_ollama_if_not_running()  # ✅ Call it before anything uses Ollama
+ 
+
+
+
 import streamlit as st
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
